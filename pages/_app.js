@@ -2,9 +2,12 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    margin: 0;
+    margin: 50px;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
   }
 `;
 
