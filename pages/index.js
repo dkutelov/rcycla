@@ -1,3 +1,4 @@
+import { Container } from "@lib/theme";
 import { useContext } from "react";
 import styled from "styled-components";
 import { LanguageContext } from "../context/language/language.context";
@@ -11,7 +12,11 @@ export default function Home() {
   const {
     state: { languages },
   } = useContext(LanguageContext);
-  let { login } = languages;
+  let { offers } = languages;
 
-  return <Title>{login}</Title>;
+  return (
+    <Container>
+      <Title>{offers}</Title>
+    </Container>
+  );
 }

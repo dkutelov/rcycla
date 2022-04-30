@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
+  height: ${({ theme }) => theme.sizes[11]};
+  background-color: #f0f0f0;
   font-size: 24px;
   font-family: ${({ theme }) => theme.fontFamily};
   color: ${({ theme }) => theme.textColors.main};
-  background-color: #eae0d5;
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   box-shadow: none;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
@@ -18,4 +20,9 @@ export const HeaderContainer = styled.header`
   top: 0px;
   left: auto;
   right: 0px;
+`;
+
+export const Logo = styled.h1`
+  font-size: ${({ theme }) => theme.sizes[6]};
+  margin: 0;
 `;
