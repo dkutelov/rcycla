@@ -15,15 +15,19 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en-EN">
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin="true"
+            rel="preload"
+            href="/fonts/SofiaSans-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&family=Roboto+Slab&display=swap"
-            rel="stylesheet"
+            rel="preload"
+            href="/fonts/Poppins-Regular.woff"
+            as="font"
+            type="font/woff"
+            crossOrigin="anonymous"
           />
         </Head>
         <body>
