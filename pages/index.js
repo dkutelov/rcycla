@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import { LanguageContext } from "../context/language/language.context";
 
 const Title = styled.h1`
   font-size: 24px;
@@ -6,5 +8,10 @@ const Title = styled.h1`
 `;
 
 export default function Home() {
-  return <Title>My page Моята страница с главна буква</Title>;
+  const {
+    state: { languages },
+  } = useContext(LanguageContext);
+  let { login } = languages;
+
+  return <Title>{login}</Title>;
 }
