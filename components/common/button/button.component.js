@@ -6,7 +6,7 @@ const ButtonWrapper = styled.button`
   color: white;
   border: none;
   background-color: ${({ theme }) => theme.colors.primary};
-  padding: ${({ theme }) => theme.sizes[2]} ${({ theme }) => theme.sizes[5]};
+  padding: ${({ theme }) => theme.sizes[1]} ${({ theme }) => theme.sizes[5]};
   font-size: 18px;
   font-weight: 400;
   margin-right: ${({ theme }) => theme.sizes[3]};

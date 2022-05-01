@@ -5,7 +5,12 @@ import { LanguageContext } from "../context/language/language.context";
 
 const Title = styled.h1`
   font-size: 24px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.textColors.main};
+  color: white;
+  padding: 10px;
+  background-color: ${({ theme }) => theme.colors.alert};
+  background-color: #aaabbc;
+  //border: 1px solid #fcec52;
 `;
 
 export default function Home() {

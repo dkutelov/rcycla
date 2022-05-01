@@ -6,7 +6,7 @@ const MenuItem = styled.a`
   align-items: center;
   font-family: inherit;
   color: ${({ theme }) => theme.colors.primary};
-  padding: ${({ theme }) => theme.sizes[2]} ${({ theme }) => theme.sizes[5]};
+  padding: ${({ theme }) => theme.sizes[1]} ${({ theme }) => theme.sizes[5]};
   font-size: ${({ theme }) => theme.fontSize.subtitle};
   font-weight: 400;
   cursor: pointer;

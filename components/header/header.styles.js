@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   height: ${({ theme }) => theme.sizes[11]};
-  background-color: #f0f0f0;
+  background-color: ${({ theme }) => theme.colors.bgColor};
   font-size: 24px;
   font-family: ${({ theme }) => theme.fontFamily};
   color: ${({ theme }) => theme.textColors.main};
