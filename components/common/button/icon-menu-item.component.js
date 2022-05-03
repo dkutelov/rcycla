@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { getTheme } from "@lib/theme/theme";
 
 const MenuItem = styled.a`
   display: flex;
   align-items: center;
   font-family: inherit;
-  color: ${({ theme }) => theme.colors.primary};
-  padding: ${({ theme }) => theme.sizes[1]} ${({ theme }) => theme.sizes[5]};
+  padding: ${({ theme }) => theme.sizes[1]};
   font-size: ${({ theme }) => theme.fontSize.subtitle};
+  margin-right: ${({ theme }) => theme.sizes[0]};
   font-weight: 400;
   cursor: pointer;
 `;
@@ -17,9 +18,10 @@ const Text = styled.span`
   margin-left: ${({ theme }) => theme.sizes[1]};
 `;
 
-export const IconMenuItem = ({ Icon, text }) => {
+export const IconMenuItem = ({ Icon, text, textColor }) => {
+  const theme = getTheme();
   return (
-    <MenuItem>
+    <MenuItem style={{ color: textColor || theme.colors.primary }}>
       <Icon />
       <Text>{text}</Text>
     </MenuItem>

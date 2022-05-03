@@ -18,7 +18,8 @@ export const AuthContainer = styled.ul`
 export const MainNav = styled.ul`
   display: flex;
   flex-direction: row;
-  padding: 0;
+  align-items: center;
+  padding: 0 ${({ theme }) => theme.sizes[2]};
   margin: 0;
   list-style: none;
 `;

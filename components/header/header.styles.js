@@ -24,5 +24,5 @@ export const HeaderContainer = styled.header`
 
 export const Logo = styled.h1`
   font-size: ${({ theme }) => theme.sizes[6]};
-  margin: 0;
+  margin: 0 ${({ theme }) => theme.sizes[3]} 0 0;
 `;

@@ -8,8 +8,8 @@ const Title = styled.h1`
   color: ${({ theme }) => theme.textColors.main};
   color: white;
   padding: 10px;
-  background-color: ${({ theme }) => theme.colors.alert};
-  background-color: #aaabbc;
+  background-color: ${({ theme }) => theme.colors.terciary};
+  background-color: ;
   //border: 1px solid #fcec52;
 `;
 
