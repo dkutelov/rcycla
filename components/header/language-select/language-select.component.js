@@ -1,11 +1,14 @@
 import { LanguageContext } from "@context/index";
 import React, { useState, useEffect, useContext } from "react";
 import { MdLanguage } from "react-icons/md";
-import { LanguageMenuContainer } from "./language-select.styles";
+import {
+  LanguageMenuContainer,
+  LanguageMenuItem,
+} from "./language-select.styles";
 
 export const LanguageSelect = () => {
   const [currentLanguage, changeCurrentLanguage] = useState("en");
-  const [isOpen, toggleOpen] = useState(true);
+  const [isOpen, toggleOpen] = useState(false);
   const { setLanguageSelected } = useContext(LanguageContext);
 
   useEffect(() => {
@@ -17,15 +20,23 @@ export const LanguageSelect = () => {
   };
   return (
     <>
-      <div>
+      <div style={{ position: "relative" }}>
         <MdLanguage onClick={toggleIsOpen} />
+
+        {isOpen && (
+          <LanguageMenuContainer>
+            <LanguageMenuItem onClick={() => changeCurrentLanguage("bg")}>
+              bg
+            </LanguageMenuItem>
+            <LanguageMenuItem onClick={() => changeCurrentLanguage("en")}>
+              en
+            </LanguageMenuItem>
+            <LanguageMenuItem onClick={() => changeCurrentLanguage("tr")}>
+              tr
+            </LanguageMenuItem>
+          </LanguageMenuContainer>
+        )}
       </div>
-      {isOpen && (
-        <LanguageMenuContainer>
-          <li onClick={() => changeCurrentLanguage("bg")}>bg</li>
-          <li onClick={() => changeCurrentLanguage("en")}>en</li>
-        </LanguageMenuContainer>
-      )}
     </>
   );
 };

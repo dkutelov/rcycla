@@ -1,7 +1,11 @@
 import React, { useContext } from "react";
-import { AiOutlineUser, AiOutlineQuestionCircle } from "react-icons/ai";
-import { MdOutlineLocalOffer } from "react-icons/md";
+
+import { MdOutlineInventory2 } from "react-icons/md";
+import { IoIosContacts, IoMdInformationCircleOutline } from "react-icons/io";
+import { RiRecycleLine } from "react-icons/ri";
+
 import { LanguageContext } from "@context/index";
+
 import {
   NavigationContainer,
   AuthContainer,
@@ -9,12 +13,13 @@ import {
 } from "./navigation.styles";
 import { IconMenuItem, Button } from "@components/common/index";
 import { getTheme } from "@lib/theme/theme";
+import { K } from "@lib/utils/constants";
 
 export const Navigation = () => {
   const {
     state: { languages },
   } = useContext(LanguageContext);
-  let { login, register, offers, requests } = languages;
+  let { login, join, products, about, ecology, contacts } = languages;
   const theme = getTheme();
 
   return (
@@ -22,22 +27,35 @@ export const Navigation = () => {
       <MainNav>
         <li>
           <IconMenuItem
-            Icon={() => <MdOutlineLocalOffer size={32} />}
-            text={offers}
+            Icon={() => <MdOutlineInventory2 size={K.menuIconSize} />}
+            text={products}
             textColor={theme.colors.terciary}
           />
         </li>
         <li>
           <IconMenuItem
-            Icon={() => <AiOutlineQuestionCircle size={32} />}
-            text={requests}
+            Icon={() => <RiRecycleLine size={K.menuIconSize} />}
+            text={ecology}
+            textColor={theme.colors.terciary}
+          />
+        </li>
+        <li>
+          <IconMenuItem
+            Icon={() => <IoMdInformationCircleOutline size={K.menuIconSize} />}
+            text={about}
+            textColor={theme.colors.terciary}
+          />
+        </li>
+        <li>
+          <IconMenuItem
+            Icon={() => <IoIosContacts size={K.menuIconSize} />}
+            text={contacts}
             textColor={theme.colors.terciary}
           />
         </li>
       </MainNav>
       <AuthContainer>
-        <IconMenuItem Icon={AiOutlineUser} text={login} />
-        <Button>{register}</Button>
+        <Button>{join}</Button>
       </AuthContainer>
     </NavigationContainer>
   );

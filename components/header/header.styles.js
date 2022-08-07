@@ -22,7 +22,9 @@ export const HeaderContainer = styled.header`
   right: 0px;
 `;
 
-export const Logo = styled.h1`
-  font-size: ${({ theme }) => theme.sizes[6]};
-  margin: 0 ${({ theme }) => theme.sizes[3]} 0 0;
+export const LogoContainer = styled.div`
+  flex-basis: 15%;
+  position: relative;
+  object-fit: cover;
+  margin-right: ${({ theme }) => theme.sizes[2]};
 `;

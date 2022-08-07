@@ -6,11 +6,11 @@ export const LanguageMenuContainer = styled.ul`
   inset: 0px;
   opacity: 1;
   transform: none;
-  height: 216px;
+  height: 105px;
   transition: opacity 280ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     transform 186ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  top: 31px;
-  left: 1426px;
+  top: 35px;
+  right: 0;
   transform-origin: 0px 0px;
   background-color: rgb(255, 255, 255);
   color: rgba(0, 0, 0, 0.87);
@@ -23,6 +23,13 @@ export const LanguageMenuContainer = styled.ul`
   width: 36px;
   min-height: 16px;
   outline: 0px;
+  list-style: none;
+  padding: ${({ theme }) => theme.sizes[2]};
+`;
+
+export const LanguageMenuItem = styled.li`
+  font-size: 18px;
+  font-family: ${({ theme }) => theme.fontFamily};
 `;
 
 export const AuthContainer = styled.ul`

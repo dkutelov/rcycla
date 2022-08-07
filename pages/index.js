@@ -1,16 +1,15 @@
 import { Container } from "@lib/theme";
+import Image from "next/image";
 import { useContext } from "react";
 import styled from "styled-components";
 import { LanguageContext } from "../context/language/language.context";
 
-const Title = styled.h1`
-  font-size: 24px;
-  color: ${({ theme }) => theme.textColors.main};
-  color: white;
-  padding: 10px;
-  background-color: ${({ theme }) => theme.colors.terciary};
-  background-color: ;
-  //border: 1px solid #fcec52;
+const ContentWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 `;
 
 export default function Home() {
@@ -21,7 +20,14 @@ export default function Home() {
 
   return (
     <Container>
-      <Title>{offers}</Title>
+      <ContentWrapper>
+        <Image
+          src="/images/under-construction-icon.jpeg"
+          width={300}
+          height={300}
+          alt="Under construction"
+        />
+      </ContentWrapper>
     </Container>
   );
 }
